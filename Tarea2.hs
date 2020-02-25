@@ -13,8 +13,8 @@ inarow :: (Eq a) => [a] -> Int
 inarow [] = 0
 inarow (x:xs) = inarow_aux (1,1,x) xs
  
- ramanujan :: Int -> [(Int,Int,Int,Int)]
- ramanujan n = [(a,b,c,d) | a <- [1..n], b <- [a..n],
+ramanujan :: Int -> [(Int,Int,Int,Int)]
+ramanujan n = [(a,b,c,d) | a <- [1..n], b <- [a..n],
                             c <- [a+1..n], d <- [c..n],
                             a^3 + b^3 == c^3 + d^3]
                             
